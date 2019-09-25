@@ -76,10 +76,11 @@
       border: 2px solid $white;
       border-radius: 2px;
       padding: 5px;
-      transition: all .2s ease;
+      transition: all .3s ease-in-out;
       padding: 8px 20px;
       background: none;
       font-size: 16px;
+      cursor: pointer;
 
       &:hover {
         background-color: $white;

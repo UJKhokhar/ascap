@@ -13,5 +13,7 @@ export default {
 <style lang="scss" scoped>
   div {
     color: $red;
+    margin: 9px 0;
+    font-size: 14px;
   }
 </style>

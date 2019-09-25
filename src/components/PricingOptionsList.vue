@@ -2,7 +2,6 @@
   <div class="options-container">
     <PricingOption
       v-for="(option, idx) in options"
-      @click.native="selectOption(option.title)"
       :key="idx"
       :id="`option${idx}`"
       :option="option"
@@ -11,7 +10,6 @@
 </template>
 
 <script>
-import { mapMutations } from 'vuex';
 import PricingOption from './PricingOption';
 
 export default {
@@ -71,22 +69,6 @@ export default {
   components: {
     PricingOption,
   },
-  methods: {
-    // Move this to PricingOption
-    selectOption(optionName) {
-      this.SET_MEMBERSHIP_OPTION(optionName);
-
-      // We need to make sure we reset the publisher options and errors
-      // if a user switches between membership options
-      this.SET_PUBLISHER_OPTION('');
-      this.SET_ERROR('');
-    },
-    ...mapMutations([
-      'SET_MEMBERSHIP_OPTION',
-      'SET_PUBLISHER_OPTION',
-      'SET_ERROR',
-    ]),
-  }
 }
 </script>
 
@@ -96,8 +78,9 @@ export default {
     grid-template-columns: auto;
     grid-auto-rows: auto;
     row-gap: 16px;
+    margin-bottom: 25px;
 
-    @include breakpoint(desktop) {
+    @media (min-width: 992px) {
       grid-template-columns: repeat(3, minmax(267px, 327px));
       row-gap: 0px;
       column-gap: 30px;
