@@ -1,0 +1,13 @@
+.membership-options-container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-auto-rows: auto;
+  row-gap: 16px;
+  margin-bottom: 25px;
+
+  @include breakpoint(large-desktop) {
+    grid-template-columns: repeat(3, minmax(267px, 327px));
+    row-gap: 0px;
+    column-gap: 30px;
+  }
+}
