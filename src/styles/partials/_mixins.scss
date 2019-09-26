@@ -2,4 +2,8 @@
   @if $point == desktop {
     @media (min-width: 769px)  { @content ; }
   }
+
+  @if $point == large-desktop {
+    @media (min-width: 992px)  { @content ; }
+  }
 }

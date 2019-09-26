@@ -6,8 +6,8 @@ module.exports = {
     loaderOptions: {
       sass: {
         data: `
-          @import "@/styles/_mixins.scss";
-          @import "@/styles/_variables.scss";
+          @import "@/styles/partials/_mixins.scss";
+          @import "@/styles/partials/_variables.scss";
         `
       }
     }

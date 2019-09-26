@@ -1,0 +1,66 @@
+nav {
+  background-image: linear-gradient(-135deg,#489cef,#175da7);
+  color: $white;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+
+  @include breakpoint(desktop) {
+    padding: 40px;
+  }
+}
+
+h1 {
+  align-self: center;
+}
+
+.logo {
+  align-self: center;
+
+  img:last-child {
+    display: none;
+  }
+
+  @include breakpoint(desktop) {
+    img:first-of-type {
+      display: none;
+    }
+
+    img:last-of-type {
+      display: block;
+    }
+  }
+}
+
+.help-btn {
+  align-self: center;
+
+  button {
+    display: none;
+    color: $white;
+    border: 2px solid $white;
+    background: none;
+
+    &:hover {
+      background-color: $white;
+      color: $blue;
+    }
+
+    @include breakpoint(desktop) {
+      display: block;
+    }
+  }
+
+  svg {
+    stroke: $white;
+
+    &:hover {
+      stroke: $blue;
+      fill: #fff;
+    }
+
+    @include breakpoint(desktop) {
+      display: none;
+    }
+  }
+}

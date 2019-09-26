@@ -1,27 +1,23 @@
 <template>
-  <div id="app">
+  <div id="app" class="app-container">
     <HeaderComponent />
-    <MembershipSection />
+    <MembershipForm />
   </div>
 </template>
 
 <script>
-  import HeaderComponent from './components/Header.vue';
-  import MembershipSection from './components/MembershipSection.vue';
+import HeaderComponent from './components/Header.vue';
+import MembershipForm from './components/MembershipForm.vue';
 
-  export default {
-    name: 'app',
-    components: {
-      HeaderComponent,
-      MembershipSection,
-    }
-  }
+export default {
+  name: 'app',
+  components: {
+    HeaderComponent,
+    MembershipForm,
+  },
+};
 </script>
 
 <style lang="scss">
-  @import '@/styles/global.scss';
-
-  #app {
-    font-family: 'Source Sans Pro';
-  }
+@import '@/styles/global.scss';
 </style>

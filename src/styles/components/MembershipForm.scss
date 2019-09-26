@@ -1,0 +1,99 @@
+.membership-form-container {
+  padding: 0 25px;
+  opacity: 1;
+  margin: 50px auto;
+
+  @media (min-width: 576px) {
+    padding: 0 35px;
+    max-width: 540px;
+  }
+
+  @include breakpoint(desktop) {
+    max-width: 720px;
+  }
+
+  @include breakpoint(large-desktop) {
+    max-width: 960px;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+}
+
+.membership-form {
+  border-left: 1px solid #cecece;
+  position: relative;
+  padding: 0 0 150px 25px;
+
+  @include breakpoint(desktop) {
+    padding-left: 50px;
+  }
+}
+
+.circle {
+  background-color: $white;
+  display: flex;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: -17.5px;
+
+  div {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    background: $blue;
+    color: $white;
+    text-align: center;
+    font-size: 12px;
+  }
+}
+
+.membership-heading {
+  h2 {
+    margin-bottom: 16px;
+  }
+
+  p {
+    margin-bottom: 30px;
+  }
+}
+
+.disclaimer {
+  a {
+    color: $blue; 
+
+    &:hover {
+      color: #489cef;
+    }
+  }
+}
+
+.cancel-btn {
+  background-color: $white;
+  color: #0d0d0d;
+  border: 1px solid #ededed;
+  margin-right: 10px;
+
+  &:hover {
+    background-color: #fafafa;
+    border: 1px solid #cecece;
+  }
+}
+
+.continue-btn {
+  color: $white;
+  background-color: $blue;
+
+  &:hover {
+    background-color: $darkblue;
+  }
+}
+
+.form-actions {
+  margin-top: 20px;
+  display: flex;
+}
