@@ -23,8 +23,6 @@
 
       <PublisherType v-if="this.showPublisherOptions" />
 
-      <Error v-if="this.$store.state.error === PUBLISHER_ERROR" />
-
       <p class="disclaimer">
         ASCAP uses TINCheck and SmartyStreets to verify certain information provided by you in connection with your application.
         Any information processed by TINCheck and SmartyStreets shall be subject to the privacy policies of

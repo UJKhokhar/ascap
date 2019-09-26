@@ -70,13 +70,13 @@ h2.043c1.128,0,2.043-0.916,2.043-2.043V-9.936z">
         <h5>{{ option.requirementsSection.title }}</h5>
         <ul>
           <li v-for="(requirement, idx) in option.requirementsSection.requirements" :key="idx">
-<svg width="10px" height="7px" viewBox="0 0 10 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-        <g id="icons8-checkmark" transform="translate(1.000000, 1.000000)" stroke="#000000">
-            <polyline id="Path" points="8 0 2.13333333 5 0 3.18181818"></polyline>
-        </g>
-    </g>
-</svg>
+          <svg width="10px" height="7px" viewBox="0 0 10 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                  <g id="icons8-checkmark" transform="translate(1.000000, 1.000000)" stroke="#000000">
+                      <polyline id="Path" points="8 0 2.13333333 5 0 3.18181818"></polyline>
+                  </g>
+              </g>
+          </svg>
           {{ requirement }}
           </li>
         </ul>
