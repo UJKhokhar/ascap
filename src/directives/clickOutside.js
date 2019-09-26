@@ -1,15 +1,15 @@
 import Vue from 'vue';
 
 Vue.directive('click-outside', {
-  bind: function (el, binding, vnode) {
-    el.clickOutsideEvent = function (event) {
+  bind(el, { expression }, { context }) {
+    el.clickOutsideEvent = event => {
       if (!(el == event.target || el.contains(event.target))) {
-        vnode.context[binding.expression](event);
+        context[expression](event);
       }
     };
     document.body.addEventListener('click', el.clickOutsideEvent)
   },
-  unbind: function (el) {
-    document.body.removeEventListener('click', el.clickOutsideEvent)
+  unbind({ clickOutsideEvent }) {
+    document.body.removeEventListener('click', clickOutsideEvent)
   },
 });
